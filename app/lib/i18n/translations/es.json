@@ -1,0 +1,214 @@
+{
+    "common": {
+        "loading": "Cargando...",
+        "error": "Error",
+        "success": "Éxito",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "search": "Buscar",
+        "viewMore": "Ver más",
+        "viewDetails": "Ver Detalles",
+        "contact": "Contacto",
+        "phone": "Teléfono",
+        "email": "Email",
+        "address": "Dirección",
+        "hours": "Horario"
+    },
+    "header": {
+        "home": "INICIO",
+        "about": "NOSOTROS",
+        "properties": "PROPIEDADES",
+        "agents": "AGENTES",
+        "services": "SERVICIOS",
+        "contact": "CONTACTO"
+    },
+    "hero": {
+        "title": "Encuentra tu Propiedad Ideal",
+        "subtitle": "La mejor selección de propiedades en la zona",
+        "operationType": "Tipo de Operación",
+        "propertyType": "Tipo de Propiedad",
+        "location": "Ubicación o Código",
+        "search": "Buscar",
+        "rent": "Renta",
+        "sale": "Venta",
+        "house": "Casa",
+        "apartment": "Departamento",
+        "land": "Terreno",
+        "commercial": "Comercial"
+    },
+    "about": {
+        "title": "¿Quiénes Somos?",
+        "subtitle": "Sobre Nosotros",
+        "description1": "Somos una agencia inmobiliaria profesional dedicada a brindar un servicio excepcional en la compra, venta y renta de propiedades. Con años de experiencia en el mercado, ayudamos a nuestros clientes a encontrar su propiedad perfecta.",
+        "description2": "Nuestra misión es hacer que el proceso inmobiliario sea simple, transparente y exitoso para todos. Ofrecemos atención personalizada y orientación experta a lo largo de su viaje inmobiliario."
+    },
+    "contactHome": {
+        "title": "¿Comprar, Vender o Rentar?",
+        "subtitle": "Te apoyamos en el proceso de venta, compra o renta de tu propiedad. Solicita una asesoría inmobiliaria profesional.",
+        "button": "Solicitar Asesoría"
+    },
+    "properties": {
+        "title": "Propiedades",
+        "subtitle": "Aquí encontrarás todas las propiedades disponibles",
+        "filters": "Filtros",
+        "clear": "Limpiar",
+        "showing": "Mostrando",
+        "properties": "propiedades",
+        "noResults": "No se encontraron propiedades",
+        "adjustFilters": "Intenta ajustar los filtros para ver más resultados",
+        "clearFilters": "Limpiar Filtros",
+        "operationType": "Tipo de Operación",
+        "propertyType": "Tipo de Propiedad",
+        "priceRange": "Rango de Precio",
+        "bedrooms": "Recámaras",
+        "bathrooms": "Baños",
+        "area": "Área (m²)",
+        "amenities": "Áreas y Amenidades",
+        "all": "Todos",
+        "any": "Cualquiera",
+        "min": "Mínimo",
+        "max": "Máximo",
+        "monthly": "MXN/Mensual",
+        "mxn": "MXN",
+        "viewMore": "Ver más",
+        "viewAll": "Ver Todas las Propiedades"
+    },
+    "agents": {
+        "title": "Nuestro Equipo",
+        "subtitle": "Listos para ayudarte",
+        "meetOurAgents": "Conoce a nuestros agentes",
+        "description": "Nuestro equipo de profesionales está dedicado a ayudarte a encontrar la propiedad perfecta. Con años de experiencia y un profundo conocimiento del mercado local."
+    },
+    "services": {
+        "title": "Nuestros Servicios",
+        "subtitle": "Soluciones inmobiliarias integrales",
+        "introTitle": "Servicios Profesionales de Bienes Raíces",
+        "introText": "En RodcerState ofrecemos una amplia gama de servicios inmobiliarios diseñados para satisfacer todas tus necesidades. Nuestro equipo de profesionales está comprometido en brindarte la mejor experiencia en cada transacción.",
+        "items": [
+            {
+                "title": "Compra y Venta",
+                "description": "Te ayudamos a encontrar la propiedad perfecta o a vender tu inmueble al mejor precio del mercado."
+            },
+            {
+                "title": "Renta de Propiedades",
+                "description": "Administramos tu propiedad y encontramos los mejores inquilinos para ti."
+            },
+            {
+                "title": "Asesoría Legal",
+                "description": "Contamos con expertos legales que te guiarán en todo el proceso de compra o venta."
+            },
+            {
+                "title": "Valuación de Inmuebles",
+                "description": "Realizamos avalúos profesionales para determinar el valor real de tu propiedad."
+            },
+            {
+                "title": "Inversión Inmobiliaria",
+                "description": "Te asesoramos en las mejores oportunidades de inversión en el mercado inmobiliario."
+            }
+        ],
+        "cta": {
+            "title": "¿Necesitas Ayuda con tu Propiedad?",
+            "text": "Nuestro equipo de expertos está listo para ayudarte. Contáctanos hoy mismo.",
+            "button": "Contáctanos Ahora"
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "subtitle": "Si necesitas más información sobre nuestros inmuebles disponibles, contáctanos.",
+        "description": "Visítanos en nuestras oficinas, estaremos encantados de atenderte personalmente. Si lo prefieres, llena el siguiente formulario y con gusto nos pondremos en contacto a la brevedad.",
+        "success": "Enviado - Gracias por tu mensaje. Nos pondremos en contacto pronto.",
+        "error": "Tienes Campos Vacíos o Inválidos",
+        "location": "Nuestra Ubicación",
+        "form": {
+            "send": "Enviar Mensaje",
+            "sending": "Enviando...",
+            "name": "Nombre Completo",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "interest": "Interesado en...",
+            "message": "Mensaje",
+            "options": {
+                "buy": "Comprar",
+                "sell": "Vender",
+                "rent": "Rentar",
+                "general": "Información General"
+            }
+        },
+        "info": {
+            "address": "Dirección",
+            "phone": "Teléfono",
+            "email": "Email",
+            "hours": "Horario",
+            "followUs": "Síguenos"
+        }
+    },
+    "footer": {
+        "aboutUs": "Sobre Nosotros",
+        "quickLinks": "Enlaces Rápidos",
+        "contactUs": "Contáctanos",
+        "followUs": "Síguenos",
+        "allRightsReserved": "Todos los derechos reservados",
+        "privacyPolicy": "Aviso de Privacidad"
+    },
+    "propertyDetail": {
+        "code": "Código",
+        "price": "Precio",
+        "bedrooms": "Recámaras",
+        "bathrooms": "Baños",
+        "parking": "Estacionamiento",
+        "area": "Área de Terreno",
+        "constructionArea": "Área de Construcción",
+        "description": "Descripción",
+        "features": "Características",
+        "location": "Ubicación",
+        "contactAgent": "Contactar Agente",
+        "relatedProperties": "Propiedades Relacionadas",
+        "notFound": "Propiedad No Encontrada",
+        "gallery": "Galería",
+        "details": "Detalles",
+        "aboutProperty": "Sobre la propiedad",
+        "type": "Tipo",
+        "operation": "Operación"
+    },
+    "agentDetail": {
+        "properties": "Propiedades",
+        "advisor": "ASESOR",
+        "recentProperties": "Propiedades más recientes",
+        "newsletter": "Boletín Informativo",
+        "newsletterText": "Regístrate y recibe información exclusiva.",
+        "subscribe": "Suscribirse",
+        "upcomingLinks": "Próximamente",
+        "contactUs": "Contáctanos",
+        "followSocial": "Síguenos en las redes",
+        "followText": "Mantente atento de todas las nuevas propiedades",
+        "notFound": "Agente No Encontrado",
+        "returnHome": "Volver al Inicio",
+        "noProperties": "Este agente no tiene propiedades asignadas actualmente.",
+        "emailPlaceholder": "Tu correo electrónico"
+    },
+    "aboutPage": {
+        "title": "Nosotros",
+        "subtitle": "Conoce nuestra historia y valores",
+        "storyTitle": "Nuestra Historia",
+        "storyText": "Fundada en 2010, RodcerState nació con la visión de transformar el mercado inmobiliario local. Lo que comenzó como una pequeña oficina familiar se ha convertido en una de las agencias más respetadas de la región, gracias a nuestro compromiso inquebrantable con la integridad y la excelencia en el servicio.",
+        "missionTitle": "Misión",
+        "missionText": "Proporcionar soluciones inmobiliarias integrales que superen las expectativas de nuestros clientes, a través de un servicio profesional, ético y personalizado.",
+        "visionTitle": "Visión",
+        "visionText": "Ser la agencia inmobiliaria líder en el mercado, reconocida por nuestra innovación, calidad humana y capacidad para hacer realidad los sueños de nuestros clientes.",
+        "valuesTitle": "Nuestros Valores",
+        "values": {
+            "integrity": "Integridad",
+            "integrityDesc": "Actuamos con honestidad y transparencia en cada transacción.",
+            "excellence": "Excelencia",
+            "excellenceDesc": "Buscamos la perfección en cada detalle de nuestro servicio.",
+            "innovation": "Innovación",
+            "innovationDesc": "Utilizamos la última tecnología para mejorar la experiencia del cliente.",
+            "commitment": "Compromiso",
+            "commitmentDesc": "Estamos dedicados al éxito y satisfacción de nuestros clientes."
+        },
+        "cta": {
+            "title": "¿Listo para encontrar tu hogar ideal?",
+            "button": "Ver Propiedades"
+        }
+    }
+}

@@ -1,0 +1,214 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "search": "Search",
+        "viewMore": "View more",
+        "viewDetails": "View Details",
+        "contact": "Contact",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "hours": "Hours"
+    },
+    "header": {
+        "home": "HOME",
+        "about": "ABOUT US",
+        "properties": "PROPERTIES",
+        "agents": "AGENTS",
+        "services": "SERVICES",
+        "contact": "CONTACT"
+    },
+    "hero": {
+        "title": "Find Your Ideal Property",
+        "subtitle": "The best selection of properties in the area",
+        "operationType": "Operation Type",
+        "propertyType": "Property Type",
+        "location": "Location or Code",
+        "search": "Search",
+        "rent": "Rent",
+        "sale": "Sale",
+        "house": "House",
+        "apartment": "Apartment",
+        "land": "Land",
+        "commercial": "Commercial"
+    },
+    "about": {
+        "title": "Who We Are?",
+        "subtitle": "About Us",
+        "description1": "We are a professional real estate agency dedicated to providing exceptional service in buying, selling, and renting properties. With years of experience in the market, we help our clients find their perfect property.",
+        "description2": "Our mission is to make the real estate process simple, transparent, and successful for everyone. We offer personalized attention and expert guidance throughout your real estate journey."
+    },
+    "contactHome": {
+        "title": "Buy, Sell, or Rent?",
+        "subtitle": "We support you in the process of selling, buying, or renting your property. Request a professional real estate consultation.",
+        "button": "Request Consultation"
+    },
+    "properties": {
+        "title": "Properties",
+        "subtitle": "Here you will find all available properties",
+        "filters": "Filters",
+        "clear": "Clear",
+        "showing": "Showing",
+        "properties": "properties",
+        "noResults": "No properties found",
+        "adjustFilters": "Try adjusting the filters to see more results",
+        "clearFilters": "Clear Filters",
+        "operationType": "Operation Type",
+        "propertyType": "Property Type",
+        "priceRange": "Price Range",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "area": "Area (m²)",
+        "amenities": "Areas and Amenities",
+        "all": "All",
+        "any": "Any",
+        "min": "Minimum",
+        "max": "Maximum",
+        "monthly": "MXN/Monthly",
+        "mxn": "MXN",
+        "viewMore": "View more",
+        "viewAll": "View All Properties"
+    },
+    "agents": {
+        "title": "Our Team",
+        "subtitle": "Ready to help you",
+        "meetOurAgents": "Meet Our Agents",
+        "description": "Our team of professionals is dedicated to helping you find the perfect property. With years of experience and deep knowledge of the local market."
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive real estate solutions",
+        "introTitle": "Professional Real Estate Services",
+        "introText": "At RodcerState we offer a wide range of real estate services designed to meet all your needs. Our team of professionals is committed to providing you with the best experience in every transaction.",
+        "items": [
+            {
+                "title": "Buying and Selling",
+                "description": "We help you find the perfect property or sell your property at the best market price."
+            },
+            {
+                "title": "Property Rental",
+                "description": "We manage your property and find the best tenants for you."
+            },
+            {
+                "title": "Legal Advice",
+                "description": "We have legal experts who will guide you through the entire buying or selling process."
+            },
+            {
+                "title": "Property Valuation",
+                "description": "We perform professional appraisals to determine the real value of your property."
+            },
+            {
+                "title": "Real Estate Investment",
+                "description": "We advise you on the best investment opportunities in the real estate market."
+            }
+        ],
+        "cta": {
+            "title": "Need Help With Your Property?",
+            "text": "Our team of experts is ready to help you. Contact us today.",
+            "button": "Contact Us Now"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "If you need more information about our available properties, contact us.",
+        "description": "Visit us at our offices, we will be happy to assist you personally. If you prefer, fill out the following form and we will gladly contact you shortly.",
+        "success": "Sent - Thank you for your message. We will contact you soon.",
+        "error": "Empty or Invalid Fields",
+        "location": "Our Location",
+        "form": {
+            "send": "Send Message",
+            "sending": "Sending...",
+            "name": "Full Name",
+            "email": "Email",
+            "phone": "Phone",
+            "interest": "Interested in...",
+            "message": "Message",
+            "options": {
+                "buy": "Buy",
+                "sell": "Sell",
+                "rent": "Rent",
+                "general": "General Information"
+            }
+        },
+        "info": {
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "hours": "Hours",
+            "followUs": "Follow Us"
+        }
+    },
+    "footer": {
+        "aboutUs": "About Us",
+        "quickLinks": "Quick Links",
+        "contactUs": "Contact Us",
+        "followUs": "Follow Us",
+        "allRightsReserved": "All rights reserved",
+        "privacyPolicy": "Privacy Policy"
+    },
+    "propertyDetail": {
+        "code": "Code",
+        "price": "Price",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "parking": "Parking",
+        "area": "Land Area",
+        "constructionArea": "Construction Area",
+        "description": "Description",
+        "features": "Features",
+        "location": "Location",
+        "contactAgent": "Contact Agent",
+        "relatedProperties": "Related Properties",
+        "notFound": "Property Not Found",
+        "gallery": "Gallery",
+        "details": "Details",
+        "aboutProperty": "About the property",
+        "type": "Type",
+        "operation": "Operation"
+    },
+    "agentDetail": {
+        "properties": "Properties",
+        "advisor": "ADVISOR",
+        "recentProperties": "Recent Properties",
+        "newsletter": "Newsletter",
+        "newsletterText": "Sign up and receive exclusive information.",
+        "subscribe": "Subscribe",
+        "upcomingLinks": "Coming Soon",
+        "contactUs": "Contact Us",
+        "followSocial": "Follow us on social media",
+        "followText": "Stay tuned for all new properties",
+        "notFound": "Agent Not Found",
+        "returnHome": "Return to Home",
+        "noProperties": "This agent currently has no assigned properties.",
+        "emailPlaceholder": "Your email address"
+    },
+    "aboutPage": {
+        "title": "About Us",
+        "subtitle": "Learn about our history and values",
+        "storyTitle": "Our Story",
+        "storyText": "Founded in 2010, RodcerState was born with the vision of transforming the local real estate market. What started as a small family office has become one of the most respected agencies in the region, thanks to our unwavering commitment to integrity and service excellence.",
+        "missionTitle": "Mission",
+        "missionText": "To provide comprehensive real estate solutions that exceed our clients' expectations through professional, ethical, and personalized service.",
+        "visionTitle": "Vision",
+        "visionText": "To be the leading real estate agency in the market, recognized for our innovation, human quality, and ability to make our clients' dreams come true.",
+        "valuesTitle": "Our Values",
+        "values": {
+            "integrity": "Integrity",
+            "integrityDesc": "We act with honesty and transparency in every transaction.",
+            "excellence": "Excellence",
+            "excellenceDesc": "We strive for perfection in every detail of our service.",
+            "innovation": "Innovation",
+            "innovationDesc": "We use the latest technology to enhance the customer experience.",
+            "commitment": "Commitment",
+            "commitmentDesc": "We are dedicated to the success and satisfaction of our clients."
+        },
+        "cta": {
+            "title": "Ready to find your dream home?",
+            "button": "View Properties"
+        }
+    }
+}
