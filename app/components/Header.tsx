@@ -167,8 +167,8 @@ export default function Header() {
                     <div
                         className="relative"
                         style={{
-                            width: "100px",
-                            height: "64px",
+                            width: "80px",
+                            height: "50px",
                         }}
                     >
                         <Link href="/">
