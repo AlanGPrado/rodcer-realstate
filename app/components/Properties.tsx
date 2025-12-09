@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import PropertyCard from './PropertyCard';
 import { useTranslation } from '../lib/i18n/useTranslation';
 import { properties } from '../lib/propertyData';
 
@@ -148,73 +148,7 @@ export default function Properties() {
                                     className="flex-shrink-0 px-2 md:px-3 py-1"
                                     style={{ width: `${100 / itemsPerView}%` }}
                                 >
-                                    <Link
-                                        href={`/propiedad/${property.id}`}
-                                        className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block"
-                                    >
-                                        <div className="relative h-64 overflow-hidden shimmer-effect">
-                                            <Image
-                                                src={property.images?.[0] || property.image}
-                                                alt={property.title}
-                                                fill
-                                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                                onLoad={(e) => {
-                                                    const target = e.target as HTMLImageElement;
-                                                    target.parentElement?.classList.add('loaded');
-                                                }}
-                                            />
-                                            <div className="absolute top-4 left-4">
-                                                <span className="bg-white/40 backdrop-blur-sm text-black px-3 py-1 rounded-full text-sm font-semibold shadow-sm">
-                                                    {property.type === 'sale' ? t('hero.sale') : t('hero.rent')}
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div className="p-6">
-                                            <h3 className="text-xl font-bold text-primary-green-dark mb-2 group-hover:text-accent-green transition-colors">
-                                                {property.title}
-                                            </h3>
-                                            <p className="text-gray-600 mb-4 flex items-center">
-                                                <i className="fas fa-map-marker-alt text-red-600 mr-2"></i>
-                                                {property.location}
-                                            </p>
-
-                                            <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                                                {property.bedrooms !== undefined && property.bedrooms > 0 && (
-                                                    <span className="flex items-center gap-1">
-                                                        <i className="fas fa-bed text-gray-500"></i>
-                                                        {property.bedrooms}
-                                                    </span>
-                                                )}
-                                                {property.bathrooms !== undefined && property.bathrooms > 0 && (
-                                                    <span className="flex items-center gap-1">
-                                                        <i className="fas fa-bath text-gray-500"></i>
-                                                        {property.bathrooms}
-                                                    </span>
-                                                )}
-                                                {property.area && (
-                                                    <span className="flex items-center gap-1">
-                                                        <i className="fas fa-ruler-combined text-gray-500"></i>
-                                                        {property.area} m²
-                                                    </span>
-                                                )}
-                                            </div>
-
-                                            <div className="border-t pt-4 flex items-center justify-between">
-                                                <div>
-                                                    <p className="text-2xl font-bold text-accent-green">
-                                                        {property.price.toLocaleString()}
-                                                    </p>
-                                                    <p className="text-xs text-gray-500">
-                                                        {property.type === 'rent' ? t('properties.monthly') : t('properties.mxn')}
-                                                    </p>
-                                                </div>
-                                                <span className="bg-primary-green text-white px-4 py-2 rounded-md group-hover:bg-accent-green transition-colors text-sm font-semibold">
-                                                    {t('properties.viewMore')}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </Link>
+                                    <PropertyCard property={property} />
                                 </div>
                             ))}
                         </div>
