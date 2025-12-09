@@ -39,7 +39,7 @@ export default function Header() {
             {/* Content Container */}
             <div className="relative z-10">
                 <div className="container mx-auto px-4 hidden lg:block">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-start justify-between">
                         <div
                             className="relative p-2"
                             style={{
@@ -135,7 +135,7 @@ export default function Header() {
                                         <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                                             <button
                                                 onClick={() => setLanguage('es')}
-                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 ${language === 'es' ? 'bg-green-50 text-primary-green font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 cursor-pointer ${language === 'es' ? 'bg-green-50 text-black' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                     }`}
                                             >
                                                 <span>🇲🇽 Español</span>
@@ -143,7 +143,7 @@ export default function Header() {
                                             </button>
                                             <button
                                                 onClick={() => setLanguage('en')}
-                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 ${language === 'en' ? 'bg-green-50 text-primary-green font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 cursor-pointer ${language === 'en' ? 'bg-green-50 text-black ' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                     }`}
                                             >
                                                 <span>🇺🇸 English</span>
