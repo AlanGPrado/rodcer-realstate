@@ -65,12 +65,16 @@ export default function AboutPage() {
                             {t('aboutPage.storyText')}
                         </p>
                     </div>
-                    <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                    <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl shimmer-effect">
                         <Image
                             src="/about-placeholder.jpg"
                             alt="Our Story"
                             fill
                             className="object-cover"
+                            onLoad={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.parentElement?.classList.add('loaded');
+                            }}
                         />
                     </div>
                 </div>
@@ -79,31 +83,45 @@ export default function AboutPage() {
             {/* Mission & Vision */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary-green-dark mb-4 relative inline-block">
+                            {t('aboutPage.missionVisionTitle')}
+                            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent-gold"></span>
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {/* Mission */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                            <div className="w-16 h-16 bg-primary-green/10 rounded-full flex items-center justify-center mb-6">
-                                <i className="fas fa-bullseye text-3xl text-gray-500"></i>
+                        <div className="text-center">
+                            <div className="mx-auto max-w-[150px] mb-6">
+                                <div className="relative w-[150px] h-[150px] rounded-full mx-auto shadow-lg flex items-center justify-center bg-gray-50 border border-gray-100">
+                                    <i className="fas fa-bullseye text-6xl text-gray-500"></i>
+                                </div>
                             </div>
                             <h3 className="text-2xl font-bold text-primary-green-dark mb-4">
                                 {t('aboutPage.missionTitle')}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                {t('aboutPage.missionText')}
-                            </p>
+                            <div className="max-w-md mx-auto">
+                                <p className="text-gray-600 leading-relaxed">
+                                    {t('aboutPage.missionText')}
+                                </p>
+                            </div>
                         </div>
 
                         {/* Vision */}
-                        <div className="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                            <div className="w-16 h-16 bg-accent-gold/10 rounded-full flex items-center justify-center mb-6">
-                                <i className="fas fa-eye text-3xl text-gray-500"></i>
+                        <div className="text-center">
+                            <div className="mx-auto max-w-[150px] mb-6">
+                                <div className="relative w-[150px] h-[150px] rounded-full mx-auto shadow-lg flex items-center justify-center bg-gray-50 border border-gray-100">
+                                    <i className="fas fa-eye text-6xl text-gray-500"></i>
+                                </div>
                             </div>
                             <h3 className="text-2xl font-bold text-primary-green-dark mb-4">
                                 {t('aboutPage.visionTitle')}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                {t('aboutPage.visionText')}
-                            </p>
+                            <div className="max-w-md mx-auto">
+                                <p className="text-gray-600 leading-relaxed">
+                                    {t('aboutPage.visionText')}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -112,7 +112,7 @@ export default function PropertyDetail() {
                         <div className="lg:col-span-2 space-y-12">
                             {/* Main Image */}
                             <div
-                                className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl cursor-pointer group"
+                                className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl cursor-pointer group shimmer-effect"
                                 onClick={() => {
                                     setCurrentImageIndex(0);
                                     setLightboxOpen(true);
@@ -123,6 +123,10 @@ export default function PropertyDetail() {
                                     alt={property.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    onLoad={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.parentElement?.classList.add('loaded');
+                                    }}
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                     <i className="fas fa-expand-arrows-alt text-white opacity-0 group-hover:opacity-100 transition-opacity text-4xl drop-shadow-lg"></i>
@@ -138,7 +142,7 @@ export default function PropertyDetail() {
                                     {property.images?.map((img, index) => (
                                         <div
                                             key={index}
-                                            className="relative h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                                            className="relative h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer group shimmer-effect"
                                             onClick={() => {
                                                 setCurrentImageIndex(index);
                                                 setLightboxOpen(true);
@@ -149,6 +153,10 @@ export default function PropertyDetail() {
                                                 alt={`${property.title} - Image ${index + 1}`}
                                                 fill
                                                 className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                                onLoad={(e) => {
+                                                    const target = e.target as HTMLImageElement;
+                                                    target.parentElement?.classList.add('loaded');
+                                                }}
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                                                 <i className="fas fa-search-plus text-white opacity-0 group-hover:opacity-100 transition-opacity text-3xl drop-shadow-lg"></i>
@@ -321,12 +329,16 @@ export default function PropertyDetail() {
                                 href={`/propiedad/${prop.id}`}
                                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
                             >
-                                <div className="relative h-48 overflow-hidden">
+                                <div className="relative h-48 overflow-hidden shimmer-effect">
                                     <Image
                                         src={prop.image}
                                         alt={prop.title}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        onLoad={(e) => {
+                                            const target = e.target as HTMLImageElement;
+                                            target.parentElement?.classList.add('loaded');
+                                        }}
                                     />
                                     <div className="absolute top-4 left-4">
                                         <span className={`px-3 py-1 rounded-full text-white text-xs font-semibold ${prop.type === 'sale' ? 'bg-primary-green' : 'bg-secondary-green'

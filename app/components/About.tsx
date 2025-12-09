@@ -10,13 +10,17 @@ export default function About() {
         <section id="about" className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="rounded-lg overflow-hidden h-96 lg:h-full">
+                    <div className="rounded-lg overflow-hidden h-96 lg:h-full shimmer-effect">
                         <Image
                             src="/about-placeholder.jpg"
                             alt="About Us"
                             width={600}
                             height={400}
                             className="w-full h-full object-cover"
+                            onLoad={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.parentElement?.classList.add('loaded');
+                            }}
                         />
                     </div>
 

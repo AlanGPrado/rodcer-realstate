@@ -287,12 +287,16 @@ export default function PropertiesPage() {
                                     href={`/propiedad/${property.id}`}
                                     className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block"
                                 >
-                                    <div className="relative h-64 overflow-hidden">
+                                    <div className="relative h-64 overflow-hidden shimmer-effect">
                                         <Image
                                             src={property.images?.[0] || '/property-placeholder.jpg'}
                                             alt={property.title}
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                            onLoad={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.parentElement?.classList.add('loaded');
+                                            }}
                                         />
                                         <div className="absolute top-4 left-4">
                                             <span className="bg-white/40 backdrop-blur-sm text-black px-3 py-1 rounded-full text-sm font-semibold shadow-sm">

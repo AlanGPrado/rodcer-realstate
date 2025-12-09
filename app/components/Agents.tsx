@@ -112,13 +112,17 @@ export default function Agents() {
                                     style={{ width: `${100 / itemsPerView}%` }}
                                 >
                                     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                                        <div className="relative h-64 md:h-80 overflow-hidden">
+                                        <div className="relative h-64 md:h-80 overflow-hidden shimmer-effect">
                                             <Link href={`/agente/${agent.id}`}>
                                                 <Image
                                                     src={agent.image}
                                                     alt={agent.name}
                                                     fill
                                                     className="object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+                                                    onLoad={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.parentElement?.parentElement?.classList.add('loaded');
+                                                    }}
                                                 />
                                             </Link>
                                         </div>

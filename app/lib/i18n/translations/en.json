@@ -191,9 +191,10 @@
         "subtitle": "Learn about our history and values",
         "storyTitle": "Our Story",
         "storyText": "Founded in 2010, RodcerState was born with the vision of transforming the local real estate market. What started as a small family office has become one of the most respected agencies in the region, thanks to our unwavering commitment to integrity and service excellence.",
-        "missionTitle": "Mission",
+        "missionVisionTitle": "Why Choose Us?",
+        "missionTitle": "Our Mission",
         "missionText": "To provide comprehensive real estate solutions that exceed our clients' expectations through professional, ethical, and personalized service.",
-        "visionTitle": "Vision",
+        "visionTitle": "Our Vision",
         "visionText": "To be the leading real estate agency in the market, recognized for our innovation, human quality, and ability to make our clients' dreams come true.",
         "valuesTitle": "Our Values",
         "values": {

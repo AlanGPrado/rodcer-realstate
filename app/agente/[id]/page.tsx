@@ -39,13 +39,17 @@ export default function AgentDetail() {
             <Header />
 
             {/* Page Header */}
-            <div className="relative h-[40vh] w-full">
+            <div className="relative h-[40vh] w-full shimmer-effect">
                 <Image
                     src="/hero-bg.jpg"
                     alt="Propiedades"
                     fill
                     className="object-cover"
                     priority
+                    onLoad={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.parentElement?.classList.add('loaded');
+                    }}
                 />
                 <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white mt-10">{t('properties.title')}</h1>
@@ -73,12 +77,16 @@ export default function AgentDetail() {
                                     agentProperties.map((property) => (
                                         <div key={property.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                                             <div className="flex flex-col md:flex-row">
-                                                <div className="relative w-full md:w-64 h-48 md:h-auto flex-shrink-0">
+                                                <div className="relative w-full md:w-64 h-48 md:h-auto flex-shrink-0 shimmer-effect">
                                                     <Image
                                                         src={property.image}
                                                         alt={property.title}
                                                         fill
                                                         className="object-cover"
+                                                        onLoad={(e) => {
+                                                            const target = e.target as HTMLImageElement;
+                                                            target.parentElement?.classList.add('loaded');
+                                                        }}
                                                     />
                                                     <div className="absolute top-4 left-4">
                                                         <span className={`bg-white/40 backdrop-blur-sm text-black px-3 py-1 rounded-full text-sm font-semibold shadow-sm ${property.type === 'sale' ? 'bg-primary-green' : 'bg-secondary-green'
@@ -152,12 +160,16 @@ export default function AgentDetail() {
                             <div className="bg-white p-6 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-primary-green-dark mb-4 border-b pb-2">{t('agentDetail.advisor')}</h3>
                                 <div className="text-center mb-4">
-                                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shimmer-effect">
                                         <Image
                                             src={agent.image}
                                             alt={agent.name}
                                             fill
                                             className="object-cover"
+                                            onLoad={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.parentElement?.classList.add('loaded');
+                                            }}
                                         />
                                     </div>
                                     <h4 className="text-lg font-bold text-gray-800">{agent.name}</h4>
@@ -181,12 +193,16 @@ export default function AgentDetail() {
                                 <div className="space-y-4">
                                     {recentProperties.map((prop) => (
                                         <div key={prop.id} className="flex gap-3 group">
-                                            <div className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden">
+                                            <div className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden shimmer-effect">
                                                 <Image
                                                     src={prop.image}
                                                     alt={prop.title}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform"
+                                                    onLoad={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.parentElement?.classList.add('loaded');
+                                                    }}
                                                 />
                                             </div>
                                             <div>

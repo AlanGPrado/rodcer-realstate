@@ -191,9 +191,10 @@
         "subtitle": "Conoce nuestra historia y valores",
         "storyTitle": "Nuestra Historia",
         "storyText": "Fundada en 2010, RodcerState nació con la visión de transformar el mercado inmobiliario local. Lo que comenzó como una pequeña oficina familiar se ha convertido en una de las agencias más respetadas de la región, gracias a nuestro compromiso inquebrantable con la integridad y la excelencia en el servicio.",
-        "missionTitle": "Misión",
+        "missionVisionTitle": "¿Por qué elegirnos?",
+        "missionTitle": "Nuestra Misión",
         "missionText": "Proporcionar soluciones inmobiliarias integrales que superen las expectativas de nuestros clientes, a través de un servicio profesional, ético y personalizado.",
-        "visionTitle": "Visión",
+        "visionTitle": "Nuestra Visión",
         "visionText": "Ser la agencia inmobiliaria líder en el mercado, reconocida por nuestra innovación, calidad humana y capacidad para hacer realidad los sueños de nuestros clientes.",
         "valuesTitle": "Nuestros Valores",
         "values": {

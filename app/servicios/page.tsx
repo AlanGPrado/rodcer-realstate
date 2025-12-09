@@ -84,12 +84,16 @@ export default function ServicesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
                     {/* Large Card - Compra y Venta */}
                     <div className="col-span-2 sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col">
-                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow">
+                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow shimmer-effect">
                             <Image
                                 src={services[0].image}
                                 alt={services[0].title}
                                 fill
                                 className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/40"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -103,12 +107,16 @@ export default function ServicesPage() {
                     {/* Middle Column */}
                     <div className="col-span-2 sm:col-span-1 md:col-span-2">
                         {/* Renta de Propiedades */}
-                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50 mb-4">
+                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50 mb-4 shimmer-effect">
                             <Image
                                 src={services[1].image}
                                 alt={services[1].title}
                                 fill
                                 className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/40"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -121,12 +129,16 @@ export default function ServicesPage() {
                         {/* Bottom 2 cards */}
                         <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
                             {/* Asesoría Legal */}
-                            <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50">
+                            <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50 shimmer-effect">
                                 <Image
                                     src={services[2].image}
                                     alt={services[2].title}
                                     fill
                                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                    onLoad={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.parentElement?.classList.add('loaded');
+                                    }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/40"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -137,12 +149,16 @@ export default function ServicesPage() {
                             </a>
 
                             {/* Valuación */}
-                            <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50">
+                            <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-50 shimmer-effect">
                                 <Image
                                     src={services[3].image}
                                     alt={services[3].title}
                                     fill
                                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                    onLoad={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.parentElement?.classList.add('loaded');
+                                    }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/40"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -156,12 +172,16 @@ export default function ServicesPage() {
 
                     {/* Right Tall Card - Inversión */}
                     <div className="col-span-2 sm:col-span-1 md:col-span-1 h-auto md:h-full flex flex-col">
-                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow">
+                        <a href="#" className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow shimmer-effect">
                             <Image
                                 src={services[4].image}
                                 alt={services[4].title}
                                 fill
                                 className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/40"></div>
                             <div className="absolute inset-0 flex items-center justify-center">

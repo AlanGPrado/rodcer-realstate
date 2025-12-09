@@ -112,7 +112,7 @@ export default function Header() {
                                     </li>
                                     <li className="relative group">
                                         <button
-                                            className="hover:text-gray-400 transition-colors flex items-center gap-1 cursor-pointer"
+                                            className="hover:text-gray-400 transition-colors flex items-center gap-1 cursor-pointer text-white"
                                             aria-label="Select Language"
                                         >
                                             <i className="fas fa-globe"></i>

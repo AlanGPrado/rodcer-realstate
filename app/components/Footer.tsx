@@ -79,31 +79,43 @@ export default function Footer() {
 
                     {/* Logos */}
                     <div className="flex flex-wrap gap-4 items-center">
-                        <div className="h-24 relative">
+                        <div className="h-24 relative shimmer-effect">
                             <Image
                                 src="/logo_new.png"
                                 alt="RodcerState Logo"
                                 width={120}
                                 height={96}
                                 className="h-24 w-24 object-contain"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                         </div>
-                        <div className="h-24 relative">
+                        <div className="h-24 relative shimmer-effect">
                             <Image
                                 src="/logo_new.png"
                                 alt="Association Logo"
                                 width={120}
                                 height={96}
                                 className="h-24 w-24 object-contain opacity-70"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                         </div>
-                        <div className="h-24 relative">
+                        <div className="h-24 relative shimmer-effect">
                             <Image
                                 src="/logo_new.png"
                                 alt="Realtor Logo"
                                 width={120}
                                 height={96}
                                 className="h-24 w-24 object-contain opacity-70"
+                                onLoad={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.parentElement?.classList.add('loaded');
+                                }}
                             />
                         </div>
                     </div>
