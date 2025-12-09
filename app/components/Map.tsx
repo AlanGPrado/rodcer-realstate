@@ -10,8 +10,8 @@ export default function Map({ location, coordinates }: MapProps) {
     const defaultPosition: [number, number] = [22.2331, -97.8611];
     const position = coordinates || defaultPosition;
 
-    // Create OpenStreetMap embed URL (no API key required)
-    const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${position[1] - 0.01},${position[0] - 0.01},${position[1] + 0.01},${position[0] + 0.01}&layer=mapnik&marker=${position[0]},${position[1]}`;
+    // Create Google Maps embed URL (no API key required)
+    const mapUrl = `https://maps.google.com/maps?q=${position[0]},${position[1]}&hl=es&z=14&output=embed`;
 
     return (
         <div className="h-full w-full rounded-lg overflow-hidden z-0 relative">
