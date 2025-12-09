@@ -9,6 +9,7 @@ import { useTranslation } from '../lib/i18n/useTranslation';
 export default function Header() {
     const { t, language, setLanguage } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
     const isHome = pathname === '/';
 
@@ -22,16 +23,16 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500 min-h-[100px] py-4">
+        <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500 lg:min-h-[100px] lg:py-4">
             {/* Background Layer 1: Kelz Gradient (All pages, not scrolled) */}
             <div
-                className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${!isScrolled ? 'opacity-100' : 'opacity-0'
+                className={`hidden lg:block absolute inset-0 transition-opacity duration-500 ease-in-out ${!isScrolled ? 'opacity-100' : 'opacity-0'
                     } kelz-background-gradient`}
             />
 
             {/* Background Layer 2: Solid Primary Gradient (Scrolled) */}
             <div
-                className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-100 shadow-lg' : 'opacity-0'
+                className={`hidden lg:block absolute inset-0 transition-opacity duration-500 ease-in-out ${isScrolled ? 'opacity-100 shadow-lg' : 'opacity-0'
                     } bg-[#386020]`}
             />
 
@@ -39,16 +40,26 @@ export default function Header() {
             <div className="relative z-10">
                 <div className="container mx-auto px-4 hidden lg:block">
                     <div className="flex items-center justify-between">
-                        <div className="w-1/6 p-2">
+                        <div
+                            className="relative p-2"
+                            style={{
+                                width: "124px",
+                                height: "79px",
+                            }}
+                        >
                             <Link href="/">
                                 <Image
                                     src="/logo_new.png"
                                     alt="RodcerState - Real Estate Group"
-                                    width={124}
-                                    height={79}
+                                    fill
+                                    className="object-contain"
+                                    sizes="124px"
+                                    priority
                                 />
                             </Link>
                         </div>
+
+
                         <div className="w-5/6">
                             <div className="flex justify-end mb-2">
                                 <ul className="flex gap-8 text-white text-sm">
@@ -124,19 +135,19 @@ export default function Header() {
                                         <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
                                             <button
                                                 onClick={() => setLanguage('es')}
-                                                className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 ${language === 'es' ? 'bg-gray-50 text-gray-700 font-black' : 'text-gray-700'
+                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 ${language === 'es' ? 'bg-green-50 text-primary-green font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                     }`}
                                             >
-                                                <span>Español</span>
-                                                {language === 'es' && <i className="fas fa-check ml-auto text-gray-700 text-xs"></i>}
+                                                <span>🇲🇽 Español</span>
+                                                {language === 'es' && <i className="fas fa-check ml-auto text-primary-green text-xs"></i>}
                                             </button>
                                             <button
                                                 onClick={() => setLanguage('en')}
-                                                className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 ${language === 'en' ? 'bg-gray-50 text-gray-700 font-black' : 'text-gray-700'
+                                                className={`w-full px-4 py-2 text-left text-sm transition-all duration-200 flex items-center gap-2 ${language === 'en' ? 'bg-green-50 text-primary-green font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                     }`}
                                             >
-                                                <span>English</span>
-                                                {language === 'en' && <i className="fas fa-check ml-auto text-gray-700 text-xs"></i>}
+                                                <span>🇺🇸 English</span>
+                                                {language === 'en' && <i className="fas fa-check ml-auto text-primary-green text-xs"></i>}
                                             </button>
                                         </div>
                                     </li>
@@ -146,66 +157,130 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Mobile Header */}
-                <div className="container mx-auto px-4 lg:hidden pb-3">
-                    <div className="flex justify-end mb-2">
-                        <ul className="flex gap-4 text-white text-xs">
-                            <li className="flex items-center gap-1 relative group">
-                                <button
-                                    className="hover:text-accent-gold transition-colors flex items-center gap-1"
-                                >
-                                    <i className="fas fa-globe"></i>
-                                    <span>{language.toUpperCase()}</span>
-                                    <i className="fas fa-chevron-down text-xs ml-1 group-hover:translate-y-0.5 transition-transform"></i>
-                                </button>
 
-                                {/* Mobile Dropdown Menu */}
-                                <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden z-50">
-                                    <button
-                                        onClick={() => setLanguage('es')}
-                                        className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 ${language === 'es' ? 'bg-gray-50 text-primary-green font-semibold' : 'text-gray-700'
-                                            }`}
-                                    >
-                                        <span className="text-lg">🇪🇸</span>
-                                        <span>ES</span>
-                                        {language === 'es' && <i className="fas fa-check ml-auto text-primary-green text-xs"></i>}
-                                    </button>
-                                    <button
-                                        onClick={() => setLanguage('en')}
-                                        className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 ${language === 'en' ? 'bg-gray-50 text-primary-green font-semibold' : 'text-gray-700'
-                                            }`}
-                                    >
-                                        <span className="text-lg">🇺🇸</span>
-                                        <span>EN</span>
-                                        {language === 'en' && <i className="fas fa-check ml-auto text-primary-green text-xs"></i>}
-                                    </button>
-                                </div>
-                            </li>
-                            <li className="flex items-center gap-1">
-                                <i className="fa fa-phone-alt text-accent-gold"></i>
-                                <a href="tel:1234567890">123 456 7890</a>
-                            </li>
-                            <li className="flex items-center gap-1">
-                                <i className="fa fa-envelope text-accent-gold"></i>
-                                <a href="mailto:info@rodcerstate.com">info@rodcerstate.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="flex items-center justify-between">
+            </div>
+
+            {/* Mobile Header (Visible on small screens) */}
+            <div className={`lg:hidden relative z-10 transition-colors duration-300 backdrop-blur-[1px] ${isScrolled ? 'bg-[#376020] shadow-md' : 'kelz-background-gradient'
+                }`}>
+                <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+                    <div
+                        className="relative"
+                        style={{
+                            width: "100px",
+                            height: "64px",
+                        }}
+                    >
                         <Link href="/">
                             <Image
-                                src="/logo.png"
+                                src="/logo_new.png"
                                 alt="RodcerState"
-                                width={80}
-                                height={50}
+                                fill
+                                className="object-contain"
+                                sizes="100px"
+                                priority
                             />
                         </Link>
-                        <button className="text-white text-2xl">
-                            <i className="fas fa-bars"></i>
-                        </button>
+                    </div>
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="text-white text-2xl p-2 focus:outline-none"
+                    >
+                        <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                    </button>
+                </div>
+
+                {/* Mobile Menu Dropdown */}
+                <div
+                    className={`absolute top-full left-0 w-full bg-white shadow-xl transition-all duration-300 ease-in-out transform ${isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+                        }`}
+                >
+                    <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+                        <Link
+                            href="/"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-sm font-bold hover:text-accent-gold transition-colors pb-2 border-b border-gray-100 ${isHome ? 'text-accent-gold' : 'text-gray-800'
+                                }`}
+                        >
+                            {t('header.home')}
+                        </Link>
+                        <Link
+                            href="/nosotros"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-sm font-bold text-gray-800 hover:text-accent-gold transition-colors pb-2 border-b border-gray-100"
+                        >
+                            {t('header.about')}
+                        </Link>
+                        <Link
+                            href="/propiedades"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-sm font-bold hover:text-accent-gold transition-colors pb-2 border-b border-gray-100 ${pathname === '/propiedades' ? 'text-accent-gold' : 'text-gray-800'
+                                }`}
+                        >
+                            {t('header.properties')}
+                        </Link>
+                        <Link
+                            href="/agentes"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-sm font-bold hover:text-accent-gold transition-colors pb-2 border-b border-gray-100 ${pathname === '/agentes' ? 'text-accent-gold' : 'text-gray-800'
+                                }`}
+                        >
+                            {t('header.agents')}
+                        </Link>
+                        <Link
+                            href="/servicios"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-sm font-bold hover:text-accent-gold transition-colors pb-2 border-b border-gray-100 ${pathname === '/servicios' ? 'text-accent-gold' : 'text-gray-800'
+                                }`}
+                        >
+                            {t('header.services')}
+                        </Link>
+                        <Link
+                            href="/contacto"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-sm font-bold text-gray-800 hover:text-accent-gold transition-colors pb-2 border-b border-gray-100"
+                        >
+                            {t('header.contact')}
+                        </Link>
+
+                        {/* Mobile Language Selector */}
+                        <div className="flex gap-4 pt-2">
+                            <button
+                                onClick={() => {
+                                    setLanguage('es');
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm ${language === 'es' ? 'bg-gray-300 text-black' : 'bg-gray-100 text-gray-600'
+                                    }`}
+                            >
+                                <span className="text-base">🇲🇽</span> ES
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setLanguage('en');
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm ${language === 'en' ? 'bg-gray-300 text-black' : 'bg-gray-100 text-gray-600'
+                                    }`}
+                            >
+                                <span className="text-base">🇺🇸</span> EN
+                            </button>
+                        </div>
+
+                        {/* Mobile Contact Info */}
+                        <div className="pt-4 mt-2 border-t border-gray-100 flex flex-col gap-3 text-sm text-gray-600">
+                            <a href="tel:1234567890" className="flex items-center gap-2">
+                                <i className="fa fa-phone-alt text-accent-gold"></i>
+                                123 456 7890
+                            </a>
+                            <a href="mailto:info@rodcerstate.com" className="flex items-center gap-2">
+                                <i className="fa fa-envelope text-accent-gold"></i>
+                                info@rodcerstate.com
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }
