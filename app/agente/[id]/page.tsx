@@ -262,8 +262,8 @@ export default function AgentDetail() {
                                     <a href="tel:+528332171100" className="flex items-center gap-2 text-gray-600 hover:text-primary-green">
                                         <i className="fas fa-phone-alt text-accent-gold"></i> +52 833 217 1100
                                     </a>
-                                    <a href="mailto:recepcion@kelz.mx" className="flex items-center gap-2 text-gray-600 hover:text-primary-green">
-                                        <i className="fas fa-envelope text-accent-gold"></i> recepcion@kelz.mx
+                                    <a href="mailto:recepcion@rodcerstate.com" className="flex items-center gap-2 text-gray-600 hover:text-primary-green">
+                                        <i className="fas fa-envelope text-accent-gold"></i> recepcion@rodcerstate.com
                                     </a>
                                     <Link href="/privacy" className="flex items-center gap-2 text-gray-600 hover:text-primary-green">
                                         <i className="fas fa-lock text-accent-gold"></i> {t('footer.privacyPolicy')}

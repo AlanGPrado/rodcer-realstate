@@ -39,16 +39,12 @@ export default function AboutPage() {
                 style={{ backgroundImage: 'url(/about-hero.jpg)' }}
             >
                 <div className="absolute inset-0 bg-black/50"></div>
-                <div className="relative z-10 text-center text-white">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white mt-10">
+                <div className="relative z-10 text-center text-white animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white mt-10 drop-shadow-lg">
                         {t('aboutPage.title')}
                     </h1>
-                    <p className="text-lg opacity-90">
-                        <Link href="/" className="hover:text-accent-gold transition-colors">
-                            {t('header.home')}
-                        </Link>
-                        <span className="mx-2">/</span>
-                        <span>{t('header.about')}</span>
+                    <p className="text-xl text-white/90 drop-shadow-md">
+                        {t('aboutPage.subtitle')}
                     </p>
                 </div>
             </section>

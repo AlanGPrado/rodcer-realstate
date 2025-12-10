@@ -24,10 +24,10 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500 lg:min-h-[100px] lg:py-4">
-            {/* Background Layer 1: Kelz Gradient (All pages, not scrolled) */}
+            {/* Background Layer 1: RodcerState Gradient (All pages, not scrolled) */}
             <div
                 className={`hidden lg:block absolute inset-0 transition-opacity duration-500 ease-in-out ${!isScrolled ? 'opacity-100' : 'opacity-0'
-                    } kelz-background-gradient`}
+                    } rodcerstate-background-gradient`}
             />
 
             {/* Background Layer 2: Solid Primary Gradient (Scrolled) */}
@@ -161,7 +161,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Header (Visible on small screens) */}
-            <div className={`lg:hidden relative z-10 transition-colors duration-300 backdrop-blur-[1px] ${isScrolled ? 'bg-[#376020] shadow-md' : 'kelz-background-gradient'
+            <div className={`lg:hidden relative z-10 transition-colors duration-300 backdrop-blur-[1px] ${isScrolled ? 'bg-[#376020] shadow-md' : 'rodcerstate-background-gradient'
                 }`}>
                 <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                     <div
